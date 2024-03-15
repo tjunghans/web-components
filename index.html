@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>Web Components Playground</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-	<script src="main.js" defer type="module"></script>
-  </body>
+    <script src="main.js" defer>
+    </script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <div style="display: flex; flex-direction: column;">
+        <mkt-price-ticker ccy-pair="EURCHF"></mkt-price-ticker>
+    </div>
+    <button id="CHFZAR">CHFZAR</button>
+    <button id="EURUSD">EURUSD</button>
+    <button id="GBPUSD">GBPUSD</button>
+
+    <script>
+        const ticker = document.querySelector('mkt-price-ticker');
+        document.getElementById('CHFZAR').addEventListener('click', () => {
+            ticker.setAttribute('ccy-pair', 'CHFZAR');
+        });
+
+        document.getElementById('EURUSD').addEventListener('click', () => {
+            ticker.setAttribute('ccy-pair', 'EURUSD');
+        });
+
+        document.getElementById('GBPUSD').addEventListener('click', () => {
+            ticker.setAttribute('ccy-pair', 'GBPUSD');
+        });
+    </script>
+</body>
+
 </html>
