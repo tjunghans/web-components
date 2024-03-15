@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server . -p 3000 -c-1",
-    "fix": "eslint --fix ."
+    "fix": "eslint --fix .",
+    "test": "eslint ."
   },
   "author": "",
   "license": "UNLICENSED",
